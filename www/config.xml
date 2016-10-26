@@ -6,10 +6,10 @@
         id        = "com.phonegap.helloworld"
         version   = "1.0.0">
 
-    <name>Hello World</name>
+    <name>ProudCity Service Center</name>
 
     <description>
-        Hello World sample application that responds to the deviceready event.
+        Find city services, get answers, pay bills, report an issue, all a tap away.
     </description>
 
     <author href="http://proudcity.com" email="info@proudcity.com">
