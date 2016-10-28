@@ -42,7 +42,7 @@
                 "proud_actions_app-1391001": {
                     "logo": "logo",
                     "title": "Service Center",
-                    "search": 'example.proudcity.com',
+                    "search": false,
                     "background": "https://san-rafael-ca.proudcity.com/wp-content/uploads/2016/02/Mt.-Tam.jpg",
                     "tab_display": "side",
                     "active_tabs": {
@@ -134,7 +134,12 @@
   <body>
 
     <div class="container logo-bar">
-        <img src="https://san-rafael-ca.proudcity.com/wp-content/themes/wp-proud-sr-ca-theme/dist/images/logo.svg" class="logo full-logo" title="Home" alt="Home">
+        <a class="pull-right btn-search" href="app.html#/city/search" title="Search">
+            <i class="fa fa-search fa-inverse"></i>
+        </a>
+        <a href="app.html#/city/local">
+            <img src="https://san-rafael-ca.proudcity.com/wp-content/themes/wp-proud-sr-ca-theme/dist/images/logo.svg" class="logo full-logo" title="Home" alt="Home">
+        </a>
     </div>
 
     <div ng-init="$root.appId = 'proud_actions_app-1391001'" class="container spacing" style="padding-top: 000px;padding-bottom:00px;"><div in-view="faqCompile = faqCompile || '%3Cdiv%20class%3D%22parent%22%20ui-view%3E%3C%2Fdiv%3E'" lazy-compile="faqCompile" lazy-decode="true"></div></div>
@@ -156,8 +161,6 @@
     <script src="js/libraries.min.js"></script>
     
     <script src="js/app.min.js"></script>
-    <script type="text/javascript" src="cordova.js"></script>
-
 
 
     <style>
@@ -167,10 +170,19 @@
         .logo-bar {
             padding: 3px;
             background: #0071BC;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
         }
         .logo {
             height: 50px;
             width: auto;
+        }
+        .logo-bar .btn-search {
+            margin-top: 2px;
+            font-size: 24px;
+            line-height: 40px;
+            padding: 0 10px;
         }
         .nav-contain {
             position: fixed;
@@ -179,6 +191,10 @@
             z-index: 1000;
             background-color: white;
             padding: 2px 0;
+        }
+        .parent {
+            padding-top: 55px;
+            padding-bottom: 50px;
         }
     </style>
   </body>

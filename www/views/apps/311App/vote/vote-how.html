@@ -2,14 +2,12 @@
 
   <ol class="breadcrumb clean">
     <li>
-      <a href="" ui-sref="city.vote.address" main-toggle="slide-left"><i class="fa fa-compass"></i></a>
+      <a href="" ui-sref="city.vote.address" main-toggle="slide-left"><i class="fa fa-location-arrow"></i></a>
     </li>
     <li class="active">
-      <i class="fa fa-map-marker"></i>Voting information for {{address.line1}}
+      <i class="fa fa-info-circle"></i>Voting information for {{address.line1}}
     </li>
-    <li>
-      <label><input type="checkbox"> Save my address <a href="#" title="What does this mean?"><i class="fa fa-fw fa-question-circle"></i></a></label>
-    </li>
+    <pc-locate-save></pc-locate-save>
   </ol>
 
   <div class="col-sm-7">

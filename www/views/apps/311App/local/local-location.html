@@ -3,22 +3,12 @@
   <search></search>
   <ol  class="breadcrumb clean">
     <li>
-      <a href="" ui-sref="city.local.address" main-toggle="slide-left" title="Choose another address"><i class="fa fa-compass"></i></a>
+      <a href="" ui-sref="city.local.address" main-toggle="slide-left" title="Choose another address"><i class="fa fa-location-arrow"></i></a>
     </li>
     <li class="active">
-      <i class="fa fa-map-marker"></i>Services at {{place.address_assoc.street_number}} {{place.address_assoc.route}}
+      <i class="fa fa-info-circle"></i>Services at {{place.address_assoc.street_number}} {{place.address_assoc.route}}
     </li>
-    <li>
-      <label>
-        <input type="checkbox" ng-model="saveAddress" ng-click="toggleSaveAddress($event);" /> 
-        Save my address
-        <a href="#" title="What does this mean?" ng-click="toggleSaveInfo($event)"><i class="fa fa-fw fa-question-circle"></i></a>
-      </label>
-    </li>
-    <div ng-if="showSaveInfo" class="text-muted">
-      If you check this box, we will save your address in a local cookie, and subsequent visits to this site will automatically display 
-      the services relevant to you. Your address will not be used to track you in any other way.
-    </div>
+    <pc-locate-save></pc-locate-save>
   </ol>
 
   <div class="row">

@@ -3,23 +3,21 @@
   <search></search>
   <ol class="breadcrumb clean" style="margin-bottom: 0;">
     <li class="active">
-      <i class="fa fa-compass"></i> Find your address
+      <i class="fa fa-location-arrow"></i> Find your address
     </li>
   </ol>
 
-  <h1>Voting is important</h1>
-  <h3>Enter your address to find out where and how to vote and learn more about the issues on the ballot.</h3>
+  <div class="text-center">
 
-  <form class="form-inline">
-    <div class="form-group">
-      <input class="input-lg form-control" type="text" googleplace ng-model="place" place="chosenPlace" ng-change="chosenUpdate()" style="width:350px" placeholder="enter an address or location" />
-    </div>
-    <button class="btn btn-lg btn-default hidden-xs"><i class="fa fa-search"></i></button>
-  </form>
+    <h1>Voting is important</h1>
+    <div class="row"><div class="col-md-10 col-md-push-1">
+      <h3>Enter your address to find out where and how to vote and learn more about the issues on the ballot.</h3>
+    </div></div>
 
+    <pc-locate state="city.vote.location" require-address></pc-locate>
+
+  </div>
   
-  
-
   <hr style="margin-top:20px" />
 
   <div class="pull-md-right">
